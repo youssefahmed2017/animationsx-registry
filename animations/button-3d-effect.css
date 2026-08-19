@@ -61,7 +61,8 @@
 }
 
 .animate-target:focus-visible {
-  outline: none;
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 @media (max-width: 600px) {
