@@ -1,0 +1,31 @@
+.animate-target {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  background: linear-gradient(135deg, #1e1e2e, #2d2d3f);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.animate-target::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.animate-target:hover::before {
+  left: 150%;
+}
